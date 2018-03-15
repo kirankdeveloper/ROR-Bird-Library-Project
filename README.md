@@ -19,10 +19,10 @@
 
 ### Web Services : Run in Postman OR Web Client
 
-GET /birds - To get list of all birds.
-POST /birds - Add a new bird.
-GET /birds/{id} - To get details of perticuler Bird
-DELETE /birds/{id} - To delete a bird by bird id.
+- GET /birds - To get list of all birds. 
+- POST /birds - Add a new bird. 
+- GET /birds/{id} - To get details of perticuler Bird. 
+- DELETE /birds/{id} - To delete a bird by bird id. 
 
 
 
