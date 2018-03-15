@@ -1,0 +1,99 @@
+Overview
+========
+In this test you will be creating a basic HTTP service with a JSON API.
+The service you will build is a fly registry and it will support the following requests:
+
+ - `GET /flys` - List all flys
+ - `POST /flys` - Add a new fly
+ - `GET /flys/{id}` - Get details on a specific fly
+ - `DELETE /flys/{id}` - Delete a fly by id
+
+No update method is required.
+
+Purpose
+=======
+
+The purpose of this implements a basic API with a NoSQL database.
+
+Requirements
+============
+
+ - You should use MongoDB as your database. We expect to find it on the
+ default port `27017`
+ - Write this in the language you feel most comfortable with
+ - Any web framework is accepted
+ - Document how to build and run your application
+ - Document how to run the test suite
+
+
+API specification
+=================
+
+Add fly
+--------
+
+### Request `POST /flys`
+
+The body is a JSON object based on the JSON schema can be found in `post-flys-request.json`.
+
+ - If `visible` is not set, it should default to `false`.
+ - `added` should default to today's date (in UTC)
+
+### Response
+
+Valid status codes:
+
+ - `201 Created` if the fly was successfully added
+ - `400 Bad request` if any mandatory fields were missing or if the input JSON was invalid
+
+The body is a JSON object based on the JSON schema can be found in `post-flys-response.json`.
+
+List all flys
+--------------
+
+### Request `GET /flys`
+
+Empty body.
+
+### Response
+
+Valid status codes:
+
+ - `200 OK`
+
+The body is a JSON array based on the JSON schema can be found in `get-flys-response.json`.
+Only visible flys should be returned.
+
+Get fly by id
+--------------
+
+### Request `GET /flys/{id}`
+
+Empty body.
+
+### Response
+
+Valid status codes:
+
+ - `200 OK` if the fly exists
+ - `404 Not found` if the fly does not exist
+
+A `404 Not found` is expected when the fly does not exist. flys with `visible` set to `false` should be returned with a `200 OK`.
+
+The response body for a `200 OK` request can be found in `get-flys-id-response.json`.
+
+Delete fly by id
+-----------------
+
+### Request `DELETE /flys/{id}`
+
+Empty body
+
+### Response
+
+Valid status codes:
+
+ - `200 OK` if the fly has been removed
+ - `404 Not found` if the fly didn't exist
+
+Empty body expected.
