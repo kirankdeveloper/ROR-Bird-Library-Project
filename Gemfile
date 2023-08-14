@@ -9,7 +9,7 @@ gem 'bson'
 gem 'bson_ext'
 gem 'mongo'
 gem 'mongo_ext'
-gem 'mongoid_paranoia'
+gem 'mongoid_paranoia', '>= 0.3.0'
 gem 'pry'
 
 # bundle exec rake doc:rails generates the API under doc/api.
