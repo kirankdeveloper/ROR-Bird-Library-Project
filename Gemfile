@@ -2,20 +2,20 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '7.1.0'
 gem 'mongoid', '~> 5.1', '>= 5.1.4'
 gem 'mongoid-tree', '~> 2.1'
 gem 'bson'
 gem 'bson_ext'
 gem 'mongo'
 gem 'mongo_ext'
-gem 'mongoid_paranoia'
+gem 'mongoid_paranoia', '>= 0.3.0'
 gem 'pry'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'responders', '~> 2.0'
-gem "roar-rails"
+gem 'responders', '~> 3.0', '>= 3.0.0'
+gem "roar-rails", ">= 1.0.2"
 gem 'multi_json'
 
 # Use ActiveModel has_secure_password
@@ -34,7 +34,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.0', '>= 3.0.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -42,13 +42,13 @@ end
 
 # Test-only
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.5.2'
   gem 'shoulda-matchers'
   gem 'foreman'
   gem 'rack-test'
   # database_cleaner 1.4 has a breaking change."
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 4.8.0'
   gem 'capybara'
 end
 
