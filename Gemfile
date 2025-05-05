@@ -42,7 +42,7 @@ end
 
 # Test-only
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem 'shoulda-matchers'
   gem 'foreman'
   gem 'rack-test'
