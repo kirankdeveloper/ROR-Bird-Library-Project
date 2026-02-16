@@ -3,13 +3,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-gem 'mongoid', '~> 5.1', '>= 5.1.4'
-gem 'mongoid-tree', '~> 2.1'
+gem 'mongoid', '~> 7.6', '>= 7.6.1'
+gem 'mongoid-tree', '~> 2.1', '>= 2.1.1'
 gem 'bson'
 gem 'bson_ext'
 gem 'mongo'
 gem 'mongo_ext'
-gem 'mongoid_paranoia'
+gem 'mongoid_paranoia', '>= 0.3.0'
 gem 'pry'
 
 # bundle exec rake doc:rails generates the API under doc/api.
